@@ -76,25 +76,25 @@ Below are the commands to run and verify the circuit in powershell/command promp
 
     a. Create new powersoftau ceremony
 
-        `snarkjs powersoftau new bn128 12 pot12_0000.ptau -v`
+        snarkjs powersoftau new bn128 12 pot12_0000.ptau -v
     
     b. Contribute to the created ceremony
 
-        `snarkjs powersoftau contribute pot12_0000.ptau pot12_0001.ptau --name="First contribution" -v -e="some random text"`
+        snarkjs powersoftau contribute pot12_0000.ptau pot12_0001.ptau --name="First contribution" -v -e="some random text"
 
     c. Prepare for start of phase 2
 
-        `snarkjs powersoftau prepare phase2 pot12_0001.ptau pot12_final.ptau -v`
+        snarkjs powersoftau prepare phase2 pot12_0001.ptau pot12_final.ptau -v
 
     d. Generate zkey file that contains the proving and verification keys together with phase 2 contributions
 
-        `snarkjs groth16 setup circuit.r1cs pot12_final.ptau circuit_0000.zkey`
+        snarkjs groth16 setup circuit.r1cs pot12_final.ptau circuit_0000.zkey
 
-        `snarkjs zkey contribute circuit_0000.zkey circuit_0001.zkey --name="First contributor name" -v -e="some random text"`
+        snarkjs zkey contribute circuit_0000.zkey circuit_0001.zkey --name="First contributor name" -v -e="some random text"
 
     e. Export verification key to json file
 
-        `snarkjs zkey export verificationkey circuit_0001.zkey verification_key.json`
+        snarkjs zkey export verificationkey circuit_0001.zkey verification_key.json
 
 6. Generate a zero knowledge proof using the zkey and witness. This outputs a proof file and a public file containing public inputs and outputs
 
