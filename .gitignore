@@ -1,0 +1,10 @@
+/circuit_cpp
+/circuit_js
+*.r1cs
+*.sym
+*.ptau
+*.wtns
+*.zkey
+proof.json
+public.json
+verification_key.json
