@@ -62,8 +62,6 @@ Below are the commands to run and verify the circuit in powershell/command promp
 
 3. Generate witness using Node.js
 
-    `echo "Using nodejs"`
-
     `cd circuit_js`
 
     `node generate_witness.js circuit.wasm ../input.json witness.wtns`
