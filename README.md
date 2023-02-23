@@ -103,3 +103,7 @@ Below are the commands to run and verify the circuit in powershell/command promp
 7. Use the verification key, proof and public file to verify if the proof is valid
 
     `snarkjs groth16 verify verification_key.json public.json proof.json`
+
+If everything worked correctly, the file structure should look like this:
+
+![filestructure](filestructure.png)
